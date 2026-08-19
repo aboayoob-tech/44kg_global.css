@@ -1,3 +1,307 @@
+@import url('ALMohanad/ALMohanad_fonts.css?ver=2.1');
+/* في أعلى ملف 44KG_GLOBAL.CSS */
+/* =========================================================
+   44KG_GLOBAL.CSS 
+   التنسيق العام للموقع - مُحسّن
+   ========================================================= */
+
+:root {
+    --font-scale: 1;
+    /* الألوان الأساسية */
+    --primary: #0d6efd;
+    --success: #198754;
+    --warning: #ffc107;
+    --danger: #dc3545;
+
+    --text: #1a1d23;
+    --muted: #6c757d;
+
+    /* الخلفيات */
+    --surface: #ffffff;
+    --surface-2: #f8f9fa;
+    --bg-body: #F4EEE5; /*#FAFAFA;*/ 
+    /* الحدود */
+    --border: #dee2e6;
+
+    /* الأكواد (مستوحاة من المواقع البرمجية العالمية) */
+    --code-bg: #0d1117;
+    --code-text: #e6edf3;
+    --code-border: #30363d;
+
+    /* الألوان العامة */
+    --link-color: #0080c0;
+    --link-hover: #c71585;
+}
+
+html {
+    direction: rtl;
+    max-width: 100%;
+    overflow-x: hidden;
+    scrollbar-gutter: stable;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    line-height: 1.5;
+    -webkit-tap-highlight-color: transparent;
+}
+
 body {
-    background-color: red !important;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    background-color: var(--bg-body);
+    margin: 0;
+    padding: 0;
+    font-family: "AlarabyTV", "AL-Mohanad", "Tajawal", "Vazirmatn", "SomarSans", sans-serif !important;
+    color: var(--text);
+    font-size: calc(1rem * var(--font-scale));
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body > * {
+    max-width: 100%;
+}
+
+body::before {
+    content: none !important;
+    display: none !important;
+}
+
+/* 3. MEDIA ELEMENTS */
+img, video, canvas, audio, embed, object {
+    max-width: 100%;
+}
+
+img, video, canvas {
+    height: auto;
+}
+
+/* 4. TYPOGRAPHY */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "AL-Mohanad", "Vazirmatn", "AlarabyTV", "Tajawal", sans-serif;
+    color: #0080c0;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+h1 { font-size: calc(2.2rem * var(--font-scale)); }
+h2 { font-size: calc(1.8rem * var(--font-scale)); }
+h3 { font-size: calc(1.5rem * var(--font-scale)); }
+h4 { font-size: calc(1.3rem * var(--font-scale)); }
+h5 { font-size: calc(1.1rem * var(--font-scale)); }
+h6 { font-size: calc(1rem * var(--font-scale)); }
+
+/* 5. TITLE SHADOW */
+.TitleShadow {
+    color: #7b1f1f;
+    text-shadow: 1px 1px 0 #ffe0b3, 2px 2px 4px rgba(0, 0, 0, 0.18);
+    font-size: calc(1.6rem * var(--font-scale));
+    font-weight: 700;
+}
+
+/* 6. LINKS */
+a {
+    color: var(--link-color);
+    transition: color 0.25s ease, text-decoration-color 0.25s ease;
+}
+
+a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+a:active {
+    color: #0000ee;
+    text-decoration: none;
+}
+
+/* 7. LISTS */
+menu, ul, ol {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+ul { padding-right: 20px; padding-left: 0; }
+ol { padding-right: 24px; padding-left: 0; direction: rtl; }
+
+.list-unstyled, menu.list-unstyled, ul.list-unstyled, ol.list-unstyled {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 4px 0;
+    color: #0a3444;
+    transition: color 0.2s ease;
+}
+
+li::marker { color: #4d4d4d; }
+li:hover { color: #000080; }
+
+/* 8. HEADER / NAVBAR / FOOTER */
+header, footer, #main-footer, .navbar {
+    background: linear-gradient(to left, #fefdfa, #ece7d5) !important;
+}
+
+.navbar {
+    border-bottom: 2px solid #c4b58b !important;
+    box-shadow: 0 6px 15px rgba(184, 168, 128, 0.3) !important;
+}
+
+/* 9. HORIZONTAL RULE */
+hr { color: #ff6f61; }
+
+/* 10. TABLES */
+:not(.editor-layout-table) > table,
+body > table:not(.editor-layout-table),
+.card-body > table:not(.editor-layout-table) {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+:not(.editor-layout-table) > table th,
+:not(.editor-layout-table) > table td,
+body > table:not(.editor-layout-table) th,
+body > table:not(.editor-layout-table) td,
+.card-body > table:not(.editor-layout-table) th,
+.card-body > table:not(.editor-layout-table) td {
+    padding: 12px 16px;
+    color: #555 !important;
+    border-bottom: 1px solid #f0f0f0;
+    border-left: 1px solid #f0f0f0;
+    text-align: right;
+    vertical-align: middle;
+}
+
+:not(.editor-layout-table) > table th:first-child,
+:not(.editor-layout-table) > table td:first-child {
+    border-left: none;
+}
+
+:not(.editor-layout-table) > table tr:last-child td {
+    border-bottom: none;
+}
+
+:not(.editor-layout-table) > table tbody tr:hover {
+    background-color: #fafbfc;
+}
+
+/* 11. CODE BLOCKS */
+pre {
+    direction: ltr;
+    text-align: left;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    background: var(--code-bg);
+    color: var(--code-text);
+    border: 1px solid var(--code-border);
+    border-radius: 10px;
+    border-left: 4px solid var(--primary);
+    overflow-x: auto;
+    font-family: "Cascadia Code", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    tab-size: 4;
+    white-space: pre;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+pre code {
+    display: block;
+    margin: 0;
+    padding: 0;
+    background: transparent !important;
+    color: inherit;
+    border: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+/* 12. INLINE CODE */
+:not(pre) > code {
+    display: inline-block;
+    padding: 0.15rem 0.4rem;
+    background: #f1f3f5;
+    color: #c7254e;
+    border: 1px solid #e5e7eb;
+    border-radius: 5px;
+    font-family: Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9em;
+    direction: ltr;
+    unicode-bidi: embed;
+}
+
+/* 13. CODE SELECTION */
+pre::selection, pre code::selection {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* 14 & 15 & 16. RESPONSIVE MEDIA QUERIES */
+@media (max-width: 768px) {
+    :not(.editor-layout-table) > table,
+    :not(.editor-layout-table) > table thead,
+    :not(.editor-layout-table) > table tbody,
+    :not(.editor-layout-table) > table tr,
+    :not(.editor-layout-table) > table th,
+    :not(.editor-layout-table) > table td {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    :not(.editor-layout-table) > table thead {
+        display: none !important;
+    }
+
+    :not(.editor-layout-table) > table tbody tr {
+        margin-bottom: 15px !important;
+        border: 1px solid #ddd !important;
+        border-radius: 8px !important;
+        background-color: #fff !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    :not(.editor-layout-table) > table tbody td {
+        text-align: right !important;
+        padding: 10px 14px !important;
+        border-bottom: 1px solid #f1f1f1 !important;
+        border-left: none !important;
+        font-size: 0.9rem !important;
+    }
+
+    pre {
+        margin: 1.25rem 0;
+        padding: 0.9rem 1rem;
+        border-radius: 8px;
+        font-size: 0.82rem;
+    }
+}
+
+@media (max-width: 480px) {
+    pre {
+        padding: 0.8rem;
+        font-size: 0.78rem;
+    }
+}
+
+/* 17. REDUCE MOTION */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
