@@ -1,6 +1,33 @@
-@import url('ALMohanad/ALMohanad_fonts.css?ver=62.1');
+@import url('ALMohanad/ALMohanad_fonts.css?ver=2.16');
 /* في أعلى ملف */
-/* 44KG_GLOBAL.CSS
+/* 44KG_GLOBAL.CSS */
+
+@font-face {
+    font-family: 'AlarabyTV';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('ALMohanad/AlarabyTVBold.woff') format('woff');
+    unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+@font-face {
+    font-family: 'AlarabyTV';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('ALMohanad/AlarabyTVMedium.woff') format('woff');
+    unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+@font-face {
+    font-family: 'AlarabyTV';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('ALMohanad/AlarabyTVRegular.woff') format('woff');
+    unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+
+
 /* =========================================================
    44KG_GLOBAL.CSS 
    التنسيق العام للموقع - مُحسّن
