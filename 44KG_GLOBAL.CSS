@@ -1,3 +1,7 @@
+@import url('/images/fonts/AlarabyTV/AlarabyTV.css');
+@import url('https://44kg.com/images/fonts/ALMohanad/ALMohanad_fonts.css?ver=3.1');
+@import url('https://44kg.com/images/fonts/Droid/Droid_fonts.css?v=2.0');
+@import url('https://44kg.com/images/fonts/KAAlNaskh/KAAlNaskh_fonts.css?v=4.22');
 /* =========================================================
    44KG_GLOBAL.CSS 
    التنسيق العام للموقع - مُحسّن
@@ -49,7 +53,7 @@ body {
     background-color: var(--bg-body);
     margin: 0;
     padding: 0;
-    font-family: "Tajawal", "Vazirmatn", "SomarSans", sans-serif;
+    font-family: "AlarabyTV", "Tajawal", "Vazirmatn", "SomarSans", sans-serif;
     color: var(--text);
     font-size: calc(1rem * var(--font-scale));
     font-weight: 400;
