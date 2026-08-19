@@ -53,7 +53,7 @@ body {
     background-color: var(--bg-body);
     margin: 0;
     padding: 0;
-    font-family: "AL-Mohanad", "AlarabyTV", "Tajawal", "Vazirmatn", "SomarSans", sans-serif !important;
+    font-family: "AlarabyTV", "AL-Mohanad", "Tajawal", "Vazirmatn", "SomarSans", sans-serif !important;
     color: var(--text);
     font-size: calc(1rem * var(--font-scale));
     font-weight: 400;
@@ -84,7 +84,7 @@ img, video, canvas {
 
 /* 4. TYPOGRAPHY */
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Vazirmatn", "Tajawal", "Noto Naskh Arabic", sans-serif;
+    font-family: "AL-Mohanad", "Vazirmatn", "AlarabyTV", "Tajawal", sans-serif;
     color: #0080c0;
     font-weight: 600;
     line-height: 1.5;
