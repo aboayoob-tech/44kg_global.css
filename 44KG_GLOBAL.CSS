@@ -5,7 +5,6 @@
 
 :root {
     --font-scale: 1;
-
     /* الألوان الأساسية */
     --primary: #0d6efd;
     --success: #198754;
@@ -18,7 +17,7 @@
     /* الخلفيات */
     --surface: #ffffff;
     --surface-2: #f8f9fa;
-
+    --bg-body: #F4EEE5; /*#FAFAFA;*/
     /* الحدود */
     --border: #dee2e6;
 
@@ -47,6 +46,7 @@ body {
     max-width: 100%;
     overflow-x: hidden;
     position: relative;
+    background-color: var(--bg-body);
     margin: 0;
     padding: 0;
     font-family: "Tajawal", "Vazirmatn", "SomarSans", sans-serif;
