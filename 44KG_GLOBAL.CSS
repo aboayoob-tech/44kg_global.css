@@ -221,6 +221,7 @@ body > table:not(.editor-layout-table),
 :not(.editor-layout-table) > table tbody tr:hover {
     background-color: #fafbfc;
 }
+
 /* =========================================================
    8. CODE BLOCKS
    ========================================================= */
@@ -242,6 +243,7 @@ pre {
 
     overflow-x: auto;
 
+    /* الخط البرمجي */
     font-family:
         "Cascadia Code",
         "SFMono-Regular",
@@ -253,12 +255,13 @@ pre {
 
     tab-size: 4;
 
-    /* مهم */
     white-space: pre-wrap;
 
-    /* لا نفرض اتجاه النص */
-    direction: inherit;
-    text-align: inherit;
+    /*
+     * اتجاه صندوق الكود
+     */
+    direction: ltr;
+    text-align: left;
 
     unicode-bidi: normal;
 
@@ -266,7 +269,10 @@ pre {
 }
 
 
-/* محتوى code */
+/* =========================================================
+   CODE داخل PRE
+   ========================================================= */
+
 pre code {
     display: block;
 
@@ -283,9 +289,8 @@ pre code {
     font-size: inherit;
     line-height: inherit;
 
-    /* لا نفرض LTR */
-    direction: inherit;
-    text-align: inherit;
+    direction: ltr;
+    text-align: left;
 
     unicode-bidi: normal;
 }
