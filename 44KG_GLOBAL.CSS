@@ -85,53 +85,51 @@ html {
     -webkit-tap-highlight-color: transparent;
 }
 
-/* ================================
-   Elegant Modern Scrollbar
-   ================================ */
-
+/* ================================================
+   Luxury Scrollbar - النسخة العريضة والواضحة
+   ================================================ */
 ::-webkit-scrollbar {
-    width: 9px;
-    height: 9px;
+    width: 18px;  /* عرض مريح وواضح للعين */
+    height: 18px;
 }
 
-/* المسار */
 ::-webkit-scrollbar-track {
-    background: transparent;
+    background: #F4EEE5;
+    border-radius: 0;
+    /* إضافة حدود داخلية خفيفة لمسار السكرول ليعطي عمقاً */
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-/* المقبض */
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(
-        180deg,
-        #C9C9C9,
-        #9E9E9E
+        135deg,
+        #E5D29F,
+        #A88B52
     );
-
-    border-radius: 999px;
-
-    border: 2px solid transparent;
+    border-radius: 6px; 
+    
+    /* منع المقبض من التمدد الطولي المبالغ فيه في الصفحات القصيرة */
+    min-height: 50px !important; 
+    
+    border: 3px solid #F4EEE5; 
     background-clip: padding-box;
-
-    transition: background 0.3s ease;
+    
+    /* إعطاء ظل قوي وبارز ليخرج بصرياً عن خلفية الصفحة */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
-/* عند المرور */
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(
-        180deg,
-        #A8A8A8,
-        #777777
+        135deg,
+        #F1E0B0,
+        #8C703C
     );
-
-    border: 2px solid transparent;
-    background-clip: padding-box;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
-/* زوايا الـ scrollbar */
 ::-webkit-scrollbar-corner {
     background: transparent;
 }
-
 body {
     max-width: 100%;
     overflow-x: hidden;
