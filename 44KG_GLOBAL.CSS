@@ -76,6 +76,7 @@
 }
 
 html {
+    direction: rtl;
     max-width: 100%;
     overflow-x: hidden;
     scrollbar-gutter: stable;
