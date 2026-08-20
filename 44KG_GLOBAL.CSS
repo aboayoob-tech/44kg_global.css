@@ -27,36 +27,34 @@
     unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
 }
 
-
 /* =========================================================
    44KG_GLOBAL.CSS 
-   التنسيق العام للموقع - مُحسّن
+   التنسيق العام للموقع - مُحسّن وخالٍ من الأخطاء
    ========================================================= */
+
+/* 1. RESET & VARIABLES */
+*, *::before, *::after, ::backdrop {
+    box-sizing: border-box;
+    border: 0 solid;
+    margin: 0;
+    padding: 0;
+}
 
 :root {
     --font-scale: 1;
-    /* الألوان الأساسية */
     --primary: #0d6efd;
     --success: #198754;
     --warning: #ffc107;
     --danger: #dc3545;
-
     --text: #1a1d23;
     --muted: #6c757d;
-
-    /* الخلفيات */
     --surface: #ffffff;
     --surface-2: #f8f9fa;
-    --bg-body: #F4EEE5; /*#FAFAFA;*/ 
-    /* الحدود */
+    --bg-body: #F4EEE5;
     --border: #dee2e6;
-
-    /* الأكواد (مستوحاة من المواقع البرمجية العالمية) */
     --code-bg: #0d1117;
     --code-text: #e6edf3;
     --code-border: #30363d;
-
-    /* الألوان العامة */
     --link-color: #0080c0;
     --link-hover: #c71585;
 }
@@ -72,18 +70,16 @@ html {
     -webkit-tap-highlight-color: transparent;
 }
 
+[dir="rtl"] {
+    text-align: right;
+}
+
 body {
     max-width: 100%;
     overflow-x: hidden;
     position: relative;
     background-color: var(--bg-body);
-    margin: 0;
-    padding: 0;
-    font-family: "AlarabyTV", "AL-Mohanad", "Tajawal", "Vazirmatn", "SomarSans", sans-serif !important;
     color: var(--text);
-    font-size: calc(1rem * var(--font-scale));
-    font-weight: 400;
-    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -94,12 +90,7 @@ body > * {
     max-width: 100%;
 }
 
-body::before {
-    content: none !important;
-    display: none !important;
-}
-
-/* 3. MEDIA ELEMENTS */
+/* 2. MEDIA ELEMENTS */
 img, video, canvas, audio, embed, object {
     max-width: 100%;
 }
@@ -108,9 +99,9 @@ img, video, canvas {
     height: auto;
 }
 
-/* 4. TYPOGRAPHY */
+/* 3. TYPOGRAPHY */
 h1, h2, h3, h4, h5, h6 {
-    font-family: "AL-Mohanad", "Vazirmatn", "AlarabyTV", "Tajawal", sans-serif;
+    font-family: "AL-Mohanad", "Tajawal", "Vazirmatn", "AlarabyTV", sans-serif;
     color: #0080c0;
     font-weight: 600;
     line-height: 1.5;
@@ -123,7 +114,6 @@ h4 { font-size: calc(1.3rem * var(--font-scale)); }
 h5 { font-size: calc(1.1rem * var(--font-scale)); }
 h6 { font-size: calc(1rem * var(--font-scale)); }
 
-/* 5. TITLE SHADOW */
 .TitleShadow {
     color: #7b1f1f;
     text-shadow: 1px 1px 0 #ffe0b3, 2px 2px 4px rgba(0, 0, 0, 0.18);
@@ -131,7 +121,7 @@ h6 { font-size: calc(1rem * var(--font-scale)); }
     font-weight: 700;
 }
 
-/* 6. LINKS */
+/* 4. LINKS */
 a {
     color: var(--link-color);
     transition: color 0.25s ease, text-decoration-color 0.25s ease;
@@ -147,7 +137,7 @@ a:active {
     text-decoration: none;
 }
 
-/* 7. LISTS */
+/* 5. LISTS */
 menu, ul, ol {
     margin-top: 0;
     margin-bottom: 1rem;
@@ -156,7 +146,7 @@ menu, ul, ol {
 ul { padding-right: 20px; padding-left: 0; }
 ol { padding-right: 24px; padding-left: 0; direction: rtl; }
 
-.list-unstyled, menu.list-unstyled, ul.list-unstyled, ol.list-unstyled {
+.list-unstyled {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -171,20 +161,19 @@ li {
 li::marker { color: #4d4d4d; }
 li:hover { color: #000080; }
 
-/* 8. HEADER / NAVBAR / FOOTER */
+/* 6. HEADER / NAVBAR / FOOTER */
 header, footer, #main-footer, .navbar {
-    background: linear-gradient(to left, #fefdfa, #ece7d5) !important;
+    background: linear-gradient(to left, #fefdfa, #ece7d5);
 }
 
 .navbar {
-    border-bottom: 2px solid #c4b58b !important;
-    box-shadow: 0 6px 15px rgba(184, 168, 128, 0.3) !important;
+    border-bottom: 2px solid #c4b58b;
+    box-shadow: 0 6px 15px rgba(184, 168, 128, 0.3);
 }
 
-/* 9. HORIZONTAL RULE */
 hr { color: #ff6f61; }
 
-/* 10. TABLES */
+/* 7. TABLES */
 :not(.editor-layout-table) > table,
 body > table:not(.editor-layout-table),
 .card-body > table:not(.editor-layout-table) {
@@ -195,13 +184,9 @@ body > table:not(.editor-layout-table),
 }
 
 :not(.editor-layout-table) > table th,
-:not(.editor-layout-table) > table td,
-body > table:not(.editor-layout-table) th,
-body > table:not(.editor-layout-table) td,
-.card-body > table:not(.editor-layout-table) th,
-.card-body > table:not(.editor-layout-table) td {
+:not(.editor-layout-table) > table td {
     padding: 12px 16px;
-    color: #555 !important;
+    color: #555;
     border-bottom: 1px solid #f0f0f0;
     border-left: 1px solid #f0f0f0;
     text-align: right;
@@ -221,14 +206,13 @@ body > table:not(.editor-layout-table) td,
     background-color: #fafbfc;
 }
 
-/* 11. CODE BLOCKS */
+/* 8. CODE BLOCKS */
 pre {
     direction: ltr;
     text-align: left;
     display: block;
     width: 100%;
     max-width: 100%;
-    box-sizing: border-box;
     margin: 1.5rem 0;
     padding: 1rem 1.25rem;
     background: var(--code-bg);
@@ -237,7 +221,7 @@ pre {
     border-radius: 10px;
     border-left: 4px solid var(--primary);
     overflow-x: auto;
-    font-family: "Cascadia Code", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-family: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
     font-size: 0.9rem;
     line-height: 1.7;
     tab-size: 4;
@@ -249,7 +233,7 @@ pre code {
     display: block;
     margin: 0;
     padding: 0;
-    background: transparent !important;
+    background: transparent;
     color: inherit;
     border: 0;
     font-family: inherit;
@@ -257,7 +241,6 @@ pre code {
     line-height: inherit;
 }
 
-/* 12. INLINE CODE */
 :not(pre) > code {
     display: inline-block;
     padding: 0.15rem 0.4rem;
@@ -265,18 +248,17 @@ pre code {
     color: #c7254e;
     border: 1px solid #e5e7eb;
     border-radius: 5px;
-    font-family: Consolas, "Liberation Mono", Menlo, monospace;
+    font-family: Consolas, monospace;
     font-size: 0.9em;
     direction: ltr;
     unicode-bidi: embed;
 }
 
-/* 13. CODE SELECTION */
 pre::selection, pre code::selection {
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* 14 & 15 & 16. RESPONSIVE MEDIA QUERIES */
+/* 9. RESPONSIVE MEDIA QUERIES */
 @media (max-width: 768px) {
     :not(.editor-layout-table) > table,
     :not(.editor-layout-table) > table thead,
@@ -284,29 +266,28 @@ pre::selection, pre code::selection {
     :not(.editor-layout-table) > table tr,
     :not(.editor-layout-table) > table th,
     :not(.editor-layout-table) > table td {
-        display: block !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
+        display: block;
+        width: 100%;
     }
 
     :not(.editor-layout-table) > table thead {
-        display: none !important;
+        display: none;
     }
 
     :not(.editor-layout-table) > table tbody tr {
-        margin-bottom: 15px !important;
-        border: 1px solid #ddd !important;
-        border-radius: 8px !important;
-        background-color: #fff !important;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     }
 
     :not(.editor-layout-table) > table tbody td {
-        text-align: right !important;
-        padding: 10px 14px !important;
-        border-bottom: 1px solid #f1f1f1 !important;
-        border-left: none !important;
-        font-size: 0.9rem !important;
+        text-align: right;
+        padding: 10px 14px;
+        border-bottom: 1px solid #f1f1f1;
+        border-left: none;
+        font-size: 0.9rem;
     }
 
     pre {
@@ -324,12 +305,12 @@ pre::selection, pre code::selection {
     }
 }
 
-/* 17. REDUCE MOTION */
+/* 10. REDUCE MOTION */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
-        scroll-behavior: auto !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+        scroll-behavior: auto;
+        animation-duration: 0.01ms;
+        animation-iteration-count: 1;
+        transition-duration: 0.01ms;
     }
 }
