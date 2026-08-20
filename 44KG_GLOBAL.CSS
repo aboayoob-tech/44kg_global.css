@@ -425,7 +425,7 @@ pre code {
    ================================================ */
 
 ::-webkit-scrollbar {
-    width: auto !important;  /* عرض عريض وواضح تماماً */
+    width: auto !important; /* عرض عريض وواضح تماماً */
     height: auto !important;
 }
 
