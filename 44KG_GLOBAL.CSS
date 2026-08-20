@@ -226,7 +226,7 @@ body > table:not(.editor-layout-table),
 pre {
     direction: ltr;
     text-align: left;
-    unicode-bidi: plaintext; /* تتيح للمتصفح تحديد اتجاه النص تلقائياً (عربي أو إنجليزي) */
+    /* unicode-bidi: plaintext;*/ /* تتيح للمتصفح تحديد اتجاه النص تلقائياً (عربي أو إنجليزي) */
     display: block;
     width: 100%;
     max-width: 100%;
