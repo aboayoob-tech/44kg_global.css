@@ -29,20 +29,20 @@
 
 /* =========================================================
    44KG_GLOBAL.CSS 
-   التنسيق العام للموقع - مُحسّن وشامل
+   التنسيق العام للموقع - مُحسّن ومرن (متوافق مع الستايلات الجانبية)
    ========================================================= */
 
 /* 1. ROOT VARIABLES & RESET */
 :root {
-    /* الخطوط والأبعاد */
+    /* الخطوط والأبعاد المرنة (تُدار من الستايلات الجانبية) */
     --font-scale: 1;
-    --content-font: "AL-Mohanad", "Tajawal", sans-serif;
-    --content-font-weight: 600;
-    --content-font-size: 1rem;
-    --ui-font-size: 0.875rem;
+    --content-font: inherit;
+    --content-font-weight: normal;
+    --content-font-size: inherit;
     --content-line-height: 1.7;
+    --ui-font-size: 0.875rem;
     
-    /* الألوان */
+    /* الألوان الأساسية */
     --primary: #0d6efd;
     --success: #198754;
     --warning: #ffc107;
@@ -55,12 +55,12 @@
     --border: #dee2e6;
     --color-on-primary: #fff;
     
-    /* أكواد برمجية */
+    /* الأكواد البرمجية */
     --code-bg: #0d1117;
     --code-text: #e6edf3;
     --code-border: #30363d;
     
-    /* روابط */
+    /* الروابط */
     --link-color: #0080c0;
     --link-hover: #c71585;
 
@@ -96,15 +96,26 @@ body {
     color: var(--text);
     font-family: var(--content-font);
     font-weight: var(--content-font-weight);
+    font-size: var(--content-font-size);
+    line-height: var(--content-line-height);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+body > * {
+    max-width: 100%;
+}
+
 /* 2. MEDIA ELEMENTS */
-img, video, canvas, audio, embed, object { max-width: 100%; }
-img, video, canvas { height: auto; }
+img, video, canvas, audio, embed, object {
+    max-width: 100%;
+}
+
+img, video, canvas {
+    height: auto;
+}
 
 /* 3. TYPOGRAPHY */
 h1, h2, h3, h4, h5, h6 {
@@ -133,50 +144,191 @@ a {
     color: var(--link-color);
     transition: color 0.25s ease, text-decoration-color 0.25s ease;
 }
-a:hover { color: var(--link-hover); text-decoration: underline; }
+
+a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+a:active {
+    color: #0000ee;
+    text-decoration: none;
+}
 
 /* 5. LISTS */
-ul, ol { margin-bottom: 1rem; }
-ul { padding-right: 20px; }
-ol { padding-right: 24px; direction: rtl; }
-li { margin: 4px 0; color: #0a3444; }
+menu, ul, ol {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
 
-/* 6. HEADER / FOOTER */
-header, footer, .navbar {
+ul { padding-right: 20px; padding-left: 0; }
+ol { padding-right: 24px; padding-left: 0; direction: rtl; }
+
+.list-unstyled {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 4px 0;
+    color: #0a3444;
+    transition: color 0.2s ease;
+}
+
+li::marker { color: #4d4d4d; }
+li:hover { color: #000080; }
+
+/* 6. HEADER / NAVBAR / FOOTER */
+header, footer, #main-footer, .navbar {
     background: linear-gradient(to left, #fefdfa, #ece7d5) !important;
 }
 
+.navbar {
+    border-bottom: 2px solid #c4b58b !important;
+    box-shadow: 0 6px 15px rgba(184, 168, 128, 0.3) !important;
+}
+
+hr { color: #ff6f61; }
+
 /* 7. TABLES */
-table { width: 100%; border-collapse: collapse; background: #fff; }
-th, td {
+:not(.editor-layout-table) > table,
+body > table:not(.editor-layout-table),
+.card-body > table:not(.editor-layout-table) {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+:not(.editor-layout-table) > table th,
+:not(.editor-layout-table) > table td {
     padding: 12px 16px;
-    color: #555;
+    color: #555 !important;
     border-bottom: 1px solid #f0f0f0;
+    border-left: 1px solid #f0f0f0;
     text-align: right;
+    vertical-align: middle;
+}
+
+:not(.editor-layout-table) > table th:first-child,
+:not(.editor-layout-table) > table td:first-child {
+    border-left: none;
+}
+
+:not(.editor-layout-table) > table tr:last-child td {
+    border-bottom: none;
+}
+
+:not(.editor-layout-table) > table tbody tr:hover {
+    background-color: #fafbfc;
 }
 
 /* 8. CODE BLOCKS */
 pre {
     direction: ltr;
-    padding: 1rem;
+    text-align: left;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
     background: var(--code-bg);
     color: var(--code-text);
+    border: 1px solid var(--code-border);
     border-radius: 10px;
     border-left: 4px solid var(--primary);
     overflow-x: auto;
-    font-family: Consolas, monospace;
-    font-size: var(--ui-font-size);
+    font-family: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    tab-size: 4;
+    white-space: pre;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-code {
+pre code {
+    display: block;
+    margin: 0;
+    padding: 0;
+    background: transparent !important;
+    color: inherit;
+    border: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+:not(pre) > code {
+    display: inline-block;
+    padding: 0.15rem 0.4rem;
     background: #f1f3f5;
     color: #c7254e;
-    padding: 2px 4px;
-    border-radius: 4px;
+    border: 1px solid #e5e7eb;
+    border-radius: 5px;
+    font-family: Consolas, monospace;
+    font-size: 0.9em;
+    direction: ltr;
+    unicode-bidi: embed;
 }
 
-/* 9. RESPONSIVE */
+pre::selection, pre code::selection {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* 9. RESPONSIVE MEDIA QUERIES */
 @media (max-width: 768px) {
-    table, thead, tbody, tr, th, td { display: block !important; width: 100% !important; }
-    thead { display: none !important; }
+    :not(.editor-layout-table) > table,
+    :not(.editor-layout-table) > table thead,
+    :not(.editor-layout-table) > table tbody,
+    :not(.editor-layout-table) > table tr,
+    :not(.editor-layout-table) > table th,
+    :not(.editor-layout-table) > table td {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    :not(.editor-layout-table) > table thead {
+        display: none !important;
+    }
+
+    :not(.editor-layout-table) > table tbody tr {
+        margin-bottom: 15px !important;
+        border: 1px solid #ddd !important;
+        border-radius: 8px !important;
+        background-color: #fff !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    :not(.editor-layout-table) > table tbody td {
+        text-align: right !important;
+        padding: 10px 14px !important;
+        border-bottom: 1px solid #f1f1f1 !important;
+        border-left: none !important;
+        font-size: 0.9rem !important;
+    }
+
+    pre {
+        margin: 1.25rem 0;
+        padding: 0.9rem 1rem;
+        border-radius: 8px;
+        font-size: 0.82rem;
+    }
+}
+
+@media (max-width: 480px) {
+    pre {
+        padding: 0.8rem;
+        font-size: 0.78rem;
+    }
+}
+
+/* 10. REDUCE MOTION */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
