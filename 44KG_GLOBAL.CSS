@@ -275,12 +275,12 @@ pre code {
     font-size: 0.9em;
 }
 
-/* عزل الأسطر العربية داخل الأكواد لضمان عدم انقلابها */
-pre .ar, pre bdi {
-    unicode-bidi: isolate;
-    direction: rtl;
-    text-align: right;
-    display: inline-block;
+/* دعم السطور العربية داخل الأكواد */
+pre .rtl-line {
+    direction: rtl !important;
+    unicode-bidi: embed !important;
+    text-align: right !important;
+    display: block;
 }
 
 pre::selection, pre code::selection {
