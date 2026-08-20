@@ -225,7 +225,7 @@ body > table:not(.editor-layout-table),
 /* 8. CODE BLOCKS */
 pre {
     direction: ltr;
-    text-align: left;
+    /* text-align: left; */
     display: block;
     width: 100%;
     max-width: 100%;
@@ -266,7 +266,7 @@ pre code {
     border-radius: 5px;
     font-family: Consolas, monospace;
     font-size: 0.9em;
-    /* direction: ltr; */
+    direction: ltr;
     unicode-bidi: embed;
 }
 
