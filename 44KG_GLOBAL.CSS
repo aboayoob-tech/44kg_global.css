@@ -83,7 +83,7 @@ html {
     text-size-adjust: 100%;
     line-height: var(--content-line-height);
     -webkit-tap-highlight-color: transparent;
-    scrollbar-color: #A88B52 #E6D7C1;
+    scrollbar-color: #8C7A6B #EEE4D7;
 }
 
 body {
@@ -425,19 +425,4 @@ pre code {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
-}
-/* ========================================================
-   3. Scrollbar Styling
-   ======================================================== */
-body::-webkit-scrollbar {
-    width: var(--scrollbar-width);
-	scrollbar-width: thin;
-	scrollbar-color: var(--color-primary) var(--scrollbar-track-bg);   
-}
-body::-webkit-scrollbar-track {
-    background: var(--scrollbar-track-bg);
-}
-body::-webkit-scrollbar-thumb {
-    background-color: var(--color-primary); /* صب السكرول بنفس هوية الموقع الكحلية */
-    border-radius: var(--scrollbar-thumb-radius);
 }
