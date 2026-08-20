@@ -274,6 +274,13 @@ pre code {
     font-family: Consolas, monospace;
     font-size: 0.9em;
 }
+/* دعم النصوص العربية داخل الأكواد البرمجية LTR */
+pre [dir="rtl"], pre .arabic-text {
+    direction: rtl !important;
+    text-align: right !important;
+    display: inline-block;
+    unicode-bidi: embed;
+}
 pre::selection, pre code::selection {
     background: rgba(255, 255, 255, 0.2);
 }
