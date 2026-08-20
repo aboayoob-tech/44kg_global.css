@@ -85,6 +85,22 @@ html {
     -webkit-tap-highlight-color: transparent;
 }
 
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    background-color: var(--bg-body);
+    color: var(--text);
+    font-family: var(--content-font);
+    font-weight: var(--content-font-weight);
+    font-size: var(--content-font-size);
+    line-height: var(--content-line-height);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 /* ================================================
    Luxury Scrollbar - النسخة العريضة والواضحة
    ================================================ */
@@ -130,22 +146,6 @@ html {
 ::-webkit-scrollbar-corner {
     background: transparent;
 }
-body {
-    max-width: 100%;
-    overflow-x: hidden;
-    position: relative;
-    background-color: var(--bg-body);
-    color: var(--text);
-    font-family: var(--content-font);
-    font-weight: var(--content-font-weight);
-    font-size: var(--content-font-size);
-    line-height: var(--content-line-height);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
 body > * {
     max-width: 100%;
 }
