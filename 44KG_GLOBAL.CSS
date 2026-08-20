@@ -222,51 +222,106 @@ body > table:not(.editor-layout-table),
     background-color: #fafbfc;
 }
 
-/* 8. CODE BLOCKS */
+/* =========================================================
+   8. CODE BLOCKS
+   ========================================================= */
+
+/* صندوق الكود */
 pre {
     direction: ltr;
-    /* text-align: left; */
+    text-align: left;
+
     display: block;
     width: 100%;
     max-width: 100%;
+
     margin: 1.5rem 0;
     padding: 1rem 1.25rem;
+
     background: var(--code-bg);
     color: var(--code-text);
+
     border: 1px solid var(--code-border);
-    border-radius: 10px;
     border-left: 4px solid var(--primary);
+    border-radius: 10px;
+
     overflow-x: auto;
-    font-family: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+
+    font-family:
+        "Cascadia Code",
+        "SFMono-Regular",
+        Consolas,
+        monospace;
+
     font-size: 0.9rem;
     line-height: 1.7;
+
     tab-size: 4;
     white-space: pre;
+
+    /*
+     * مهم للنصوص المختلطة:
+     * عربي + إنجليزي + أرقام + رموز
+     */
+    unicode-bidi: plaintext;
+
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
+
+/* محتوى الكود داخل pre */
 pre code {
     display: block;
+
     margin: 0;
     padding: 0;
+
     background: transparent !important;
+
     color: inherit;
+
     border: 0;
+
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
+
+    direction: ltr;
+
+    /*
+     * يسمح للمتصفح بتحديد اتجاه النص المختلط
+     */
+    unicode-bidi: plaintext;
 }
+
+
+/* =========================================================
+   INLINE CODE
+   الكود الموجود داخل النص العادي
+   ========================================================= */
 
 :not(pre) > code {
     display: inline-block;
+
     padding: 0.15rem 0.4rem;
+
     background: #f1f3f5;
     color: #c7254e;
+
     border: 1px solid #e5e7eb;
     border-radius: 5px;
-    font-family: Consolas, monospace;
+
+    font-family:
+        Consolas,
+        "Cascadia Code",
+        monospace;
+
     font-size: 0.9em;
-    direction: ltr;
+
+    /*
+     * لا نجعل اتجاه الفقرة RTL أو LTR هنا.
+     * نترك المتصفح يتعامل مع النص المختلط.
+     */
     unicode-bidi: embed;
 }
 
