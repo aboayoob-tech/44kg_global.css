@@ -86,8 +86,6 @@ html {
     -webkit-tap-highlight-color: transparent;
 }
 
-[dir="rtl"] { text-align: right; }
-
 body {
     max-width: 100%;
     overflow-x: hidden;
