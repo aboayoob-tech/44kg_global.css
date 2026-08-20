@@ -221,16 +221,11 @@ body > table:not(.editor-layout-table),
 :not(.editor-layout-table) > table tbody tr:hover {
     background-color: #fafbfc;
 }
-
 /* =========================================================
    8. CODE BLOCKS
    ========================================================= */
 
-/* صندوق الكود */
 pre {
-    direction: ltr;
-    text-align: left;
-
     display: block;
     width: 100%;
     max-width: 100%;
@@ -257,19 +252,21 @@ pre {
     line-height: 1.7;
 
     tab-size: 4;
-    white-space: pre;
 
-    /*
-     * مهم للنصوص المختلطة:
-     * عربي + إنجليزي + أرقام + رموز
-     */
-    unicode-bidi: plaintext;
+    /* مهم */
+    white-space: pre-wrap;
+
+    /* لا نفرض اتجاه النص */
+    direction: inherit;
+    text-align: inherit;
+
+    unicode-bidi: normal;
 
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 
-/* محتوى الكود داخل pre */
+/* محتوى code */
 pre code {
     display: block;
 
@@ -286,18 +283,16 @@ pre code {
     font-size: inherit;
     line-height: inherit;
 
-    direction: ltr;
+    /* لا نفرض LTR */
+    direction: inherit;
+    text-align: inherit;
 
-    /*
-     * يسمح للمتصفح بتحديد اتجاه النص المختلط
-     */
-    unicode-bidi: plaintext;
+    unicode-bidi: normal;
 }
 
 
 /* =========================================================
    INLINE CODE
-   الكود الموجود داخل النص العادي
    ========================================================= */
 
 :not(pre) > code {
@@ -318,10 +313,6 @@ pre code {
 
     font-size: 0.9em;
 
-    /*
-     * لا نجعل اتجاه الفقرة RTL أو LTR هنا.
-     * نترك المتصفح يتعامل مع النص المختلط.
-     */
     unicode-bidi: embed;
 }
 
