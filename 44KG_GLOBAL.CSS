@@ -101,19 +101,22 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+body > * {
+    max-width: 100%;
+}
+
 /* ================================================
-   Luxury Scrollbar - النسخة العريضة والواضحة
+   Luxury Scrollbar - النسخة المضمونة والبارزة
    ================================================ */
+
 ::-webkit-scrollbar {
-    width: 18px;  /* عرض مريح وواضح للعين */
-    height: 18px;
+    width: 16px;  /* عرض ممتاز وواضح */
+    height: 16px;
 }
 
 ::-webkit-scrollbar-track {
     background: #F4EEE5;
     border-radius: 0;
-    /* إضافة حدود داخلية خفيفة لمسار السكرول ليعطي عمقاً */
-    border-left: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -122,16 +125,11 @@ body {
         #E5D29F,
         #A88B52
     );
-    border-radius: 6px; 
+    border-radius: 4px; /* زوايا ناعمة ومستقرة */
     
-    /* منع المقبض من التمدد الطولي المبالغ فيه في الصفحات القصيرة */
-    min-height: 50px !important; 
-    
-    border: 3px solid #F4EEE5; 
+    /* استخدام حدود سميكة بلون الخلفية لفصل المقبض وإبرازه بصرياً */
+    border: 4px solid #F4EEE5; 
     background-clip: padding-box;
-    
-    /* إعطاء ظل قوي وبارز ليخرج بصرياً عن خلفية الصفحة */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -140,14 +138,12 @@ body {
         #F1E0B0,
         #8C703C
     );
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    /* تصغير الحد قليلاً عند التحويم ليزداد عرض المقبض بصرياً */
+    border: 3px solid #F4EEE5; 
 }
 
 ::-webkit-scrollbar-corner {
     background: transparent;
-}
-body > * {
-    max-width: 100%;
 }
 
 /* 2. MEDIA ELEMENTS */
