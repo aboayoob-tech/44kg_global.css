@@ -275,6 +275,14 @@ pre code {
     font-size: 0.9em;
 }
 
+/* عزل الأسطر العربية داخل الأكواد لضمان عدم انقلابها */
+pre .ar, pre bdi {
+    unicode-bidi: isolate;
+    direction: rtl;
+    text-align: right;
+    display: inline-block;
+}
+
 pre::selection, pre code::selection {
     background: rgba(255, 255, 255, 0.2);
 }
