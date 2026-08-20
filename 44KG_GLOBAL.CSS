@@ -222,11 +222,11 @@ body > table:not(.editor-layout-table),
     background-color: #fafbfc;
 }
 
-/* 8. CODE BLOCKS - مُحسّن لمنع التوريث الخاطئ للاتجاه */
+/* 8. CODE BLOCKS - دعم الأكواد LTR مع سلامة النصوص العربية */
 pre {
-    direction: ltr !important;
-    text-align: left !important;
-    unicode-bidi: bidi-override;
+    direction: ltr;
+    text-align: left;
+    unicode-bidi: plaintext; /* تتيح للمتصفح تحديد اتجاه النص تلقائياً (عربي أو إنجليزي) */
     display: block;
     width: 100%;
     max-width: 100%;
@@ -247,9 +247,9 @@ pre {
 }
 
 pre code {
-    direction: ltr !important;
-    text-align: left !important;
-    unicode-bidi: bidi-override;
+    direction: ltr;
+    text-align: left;
+    unicode-bidi: plaintext;
     display: block;
     margin: 0;
     padding: 0;
@@ -262,9 +262,9 @@ pre code {
 }
 
 :not(pre) > code {
-    direction: ltr !important;
-    text-align: left !important;
-    unicode-bidi: embed;
+    direction: ltr;
+    text-align: left;
+    unicode-bidi: plaintext;
     display: inline-block;
     padding: 0.15rem 0.4rem;
     background: #f1f3f5;
