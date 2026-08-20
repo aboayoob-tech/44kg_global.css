@@ -266,7 +266,7 @@ pre code {
     border-radius: 5px;
     font-family: Consolas, monospace;
     font-size: 0.9em;
-    direction: ltr;
+    /* direction: ltr; */
     unicode-bidi: embed;
 }
 
