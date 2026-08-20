@@ -222,11 +222,10 @@ body > table:not(.editor-layout-table),
     background-color: #fafbfc;
 }
 
-/* 8. CODE BLOCKS - دعم الأكواد LTR مع سلامة النصوص العربية */
+/* 8. CODE BLOCKS */
 pre {
     direction: ltr;
     text-align: left;
-    /* unicode-bidi: plaintext;*/ /* تتيح للمتصفح تحديد اتجاه النص تلقائياً (عربي أو إنجليزي) */
     display: block;
     width: 100%;
     max-width: 100%;
@@ -247,9 +246,6 @@ pre {
 }
 
 pre code {
-    direction: ltr;
-    text-align: left;
-    unicode-bidi: plaintext;
     display: block;
     margin: 0;
     padding: 0;
@@ -262,9 +258,6 @@ pre code {
 }
 
 :not(pre) > code {
-    direction: ltr;
-    text-align: left;
-    unicode-bidi: plaintext;
     display: inline-block;
     padding: 0.15rem 0.4rem;
     background: #f1f3f5;
@@ -273,18 +266,8 @@ pre code {
     border-radius: 5px;
     font-family: Consolas, monospace;
     font-size: 0.9em;
-}
-
-/* دعم السطور العربية داخل الأكواد */
-pre .rtl-line {
-    direction: rtl !important;
-    unicode-bidi: embed !important;
-    text-align: right !important;
-    display: block;
-}
-
-pre::selection, pre code::selection {
-    background: rgba(255, 255, 255, 0.2);
+    direction: ltr;
+    unicode-bidi: embed;
 }
 
 /* 9. RESPONSIVE MEDIA QUERIES */
