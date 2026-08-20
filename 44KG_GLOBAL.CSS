@@ -83,6 +83,7 @@ html {
     text-size-adjust: 100%;
     line-height: var(--content-line-height);
     -webkit-tap-highlight-color: transparent;
+    scrollbar-color: #A88B52 #E6D7C1;
 }
 
 body {
