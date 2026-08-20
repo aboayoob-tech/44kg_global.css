@@ -268,10 +268,51 @@ pre {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-
 /* =========================================================
-   CODE داخل PRE
+   CODE BLOCKS — مستقل تمامًا عن اتجاه الصفحة
    ========================================================= */
+
+pre {
+    direction: ltr !important;
+    text-align: left !important;
+
+    display: block;
+    width: 100%;
+    max-width: 100%;
+
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+
+    background: var(--code-bg);
+    color: var(--code-text);
+
+    border: 1px solid var(--code-border);
+    border-left: 4px solid var(--primary);
+    border-radius: 10px;
+
+    overflow-x: auto;
+
+    font-family:
+        "Cascadia Code",
+        "SFMono-Regular",
+        Consolas,
+        monospace;
+
+    font-size: 0.9rem;
+    line-height: 1.7;
+
+    tab-size: 4;
+    white-space: pre-wrap;
+
+    /*
+     * مهم جدًا:
+     * يمنع وراثة قواعد bidi من العناصر الأب.
+     */
+    unicode-bidi: isolate;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
 
 pre code {
     display: block;
@@ -280,7 +321,6 @@ pre code {
     padding: 0;
 
     background: transparent !important;
-
     color: inherit;
 
     border: 0;
@@ -289,10 +329,13 @@ pre code {
     font-size: inherit;
     line-height: inherit;
 
-    direction: ltr;
-    text-align: left;
+    direction: ltr !important;
+    text-align: left !important;
 
-    unicode-bidi: normal;
+    /*
+     * استقلال كامل عن اتجاه الصفحة
+     */
+    unicode-bidi: isolate;
 }
 
 
@@ -318,7 +361,8 @@ pre code {
 
     font-size: 0.9em;
 
-    unicode-bidi: embed;
+    unicode-bidi: isolate;
+    direction: ltr;
 }
 
 /* 9. RESPONSIVE MEDIA QUERIES */
