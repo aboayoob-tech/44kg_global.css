@@ -425,8 +425,8 @@ pre code {
    ================================================ */
 
 ::-webkit-scrollbar {
-    width: 16px !important;  /* عرض عريض وواضح تماماً */
-    height: 16px !important;
+    width: auto !important;  /* عرض عريض وواضح تماماً */
+    height: auto !important;
 }
 
 ::-webkit-scrollbar-track {
