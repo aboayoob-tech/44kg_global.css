@@ -68,13 +68,6 @@
     --bg-gradient-intensity: 1;
 }
 
-*, *::before, *::after, ::backdrop {
-    box-sizing: border-box;
-    border: 0 solid;
-    margin: 0;
-    padding: 0;
-}
-
 html {
     max-width: 100%;
     overflow-x: hidden;
