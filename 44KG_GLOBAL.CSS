@@ -431,3 +431,26 @@ pre code {
         transition-duration: 0.01ms !important;
     }
 }
+/* فرض ظهور الجداول بشكل طبيعي على سطح المكتب لتجاوز أي قيود سابقة في الملف */
+@media (min-width: 769px) {
+    table, 
+    .table-responsive table, 
+    .content table, 
+    .message-content table {
+        display: table !important;
+        width: 100% !important;
+    }
+    table tr {
+        display: table-row !important;
+    }
+    table th, 
+    table td {
+        display: table-cell !important;
+    }
+    table thead {
+        display: table-header-group !important;
+    }
+    table tbody {
+        display: table-row-group !important;
+    }
+}
