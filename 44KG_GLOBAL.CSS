@@ -378,7 +378,7 @@ pre code {
     }
 }
 
-/* 10. REDUCE MOTION */
+/* 10. REDUCE MOTION 
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         scroll-behavior: auto !important;
@@ -386,7 +386,7 @@ pre code {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
-}
+} */
 /* =========================================================
    13. الجداول المتجاوبة والشاملة (بدون تعديل HTML)
    ========================================================= */
