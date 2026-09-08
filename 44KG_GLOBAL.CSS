@@ -194,37 +194,69 @@ header, footer, #main-footer, .navbar {
 
 hr { color: #ff6f61; }
 
-/* 7. TABLES */
-:not(.editor-layout-table) > table,
-body > table:not(.editor-layout-table),
-.card-body > table:not(.editor-layout-table) {
+/* =========================================================
+ 7. TABLES 
+   ========================================================= */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    /* إيقاف الـ box-shadow التقليدي هنا لأنه يُقص بسبب الـ overflow */
+    box-shadow: none; 
+}
+
+html body table,
+.table-responsive table {
     width: 100%;
     max-width: 100%;
     border-collapse: collapse;
     background: #fff;
+    margin: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    
+    /* الحل البديل: استخدام drop-shadow يلتف حول الجدول بالكامل متجاوزاً القيود */
+    filter: drop-shadow(0 0.5rem 1rem oklch(0.2 0 0 / 0.15));
 }
 
-:not(.editor-layout-table) > table th,
-:not(.editor-layout-table) > table td {
+html body table th,
+html body table thead td {
+    background-color: #D1E7DD;
+    color: #0f5132;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 600;
+    padding: 14px 16px;
+    border: 1px solid var(--code-border);
+    text-align: right;
+    white-space: nowrap;
+    padding-bottom: 12px;
+    /* التأكد من عدم وجود ظل هنا */
+}
+
+html body table td {
     padding: 12px 16px;
-    color: #555 !important;
+    color: #333;
     border-bottom: 1px solid #f0f0f0;
     border-left: 1px solid #f0f0f0;
     text-align: right;
+    font-size: 0.95rem;
     vertical-align: middle;
 }
 
-:not(.editor-layout-table) > table th:first-child,
-:not(.editor-layout-table) > table td:first-child {
+html body table th:first-child,
+html body table thead td:first-child,
+html body table td:first-child {
     border-left: none;
 }
 
-:not(.editor-layout-table) > table tr:last-child td {
-    border-bottom: none;
+html body table tr:last-child td {
+    border-bottom: 1px solid #f0f0f0;
 }
 
-:not(.editor-layout-table) > table tbody tr:hover {
-    background-color: #fafbfc;
+html body table tbody tr:hover {
+    background-color: #f8f9fa;
 }
 
 /* =========================================================
