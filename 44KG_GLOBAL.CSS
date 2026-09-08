@@ -432,25 +432,53 @@ pre code {
     }
 }
 /* فرض ظهور الجداول بشكل طبيعي على سطح المكتب لتجاوز أي قيود سابقة في الملف */
-@media (min-width: 769px) {
-    table, 
-    .table-responsive table, 
-    .content table, 
-    .message-content table {
-        display: table !important;
+/* 9. RESPONSIVE MEDIA QUERIES */
+@media (max-width: 768px) {
+    :not(.editor-layout-table) > table,
+    :not(.editor-layout-table) > table thead,
+    :not(.editor-layout-table) > table tbody,
+    :not(.editor-layout-table) > table tr,
+    :not(.editor-layout-table) > table th,
+    :not(.editor-layout-table) > table td {
+        display: block !important;
         width: 100% !important;
     }
-    table tr {
-        display: table-row !important;
+    :not(.editor-layout-table) > table thead {
+        display: none !important;
     }
-    table th, 
-    table td {
-        display: table-cell !important;
+    :not(.editor-layout-table) > table tbody tr {
+        margin-bottom: 15px !important;
+        border: 1px solid #ddd !important;
+        border-radius: 8px !important;
+        background-color: #fff !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
     }
-    table thead {
-        display: table-header-group !important;
+    :not(.editor-layout-table) > table tbody td {
+        text-align: right !important;
+        padding: 10px 14px !important;
+        border-bottom: 1px solid #f1f1f1 !important;
+        border-left: none !important;
+        font-size: 0.9rem !important;
     }
-    table tbody {
-        display: table-row-group !important;
+    pre {
+        margin: 1.25rem 0;
+        padding: 0.9rem 1rem;
+        border-radius: 8px;
+        font-size: 0.82rem;
+    }
+}
+@media (max-width: 480px) {
+    pre {
+        padding: 0.8rem;
+        font-size: 0.78rem;
+    }
+}
+/* 10. REDUCE MOTION */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }
