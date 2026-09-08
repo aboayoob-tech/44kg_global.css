@@ -26,7 +26,17 @@
     src: url('ALMohanad/AlarabyTVRegular.woff') format('woff');
     unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
 }
+*, *::before, *::after, ::backdrop {
+    box-sizing: border-box;
+    border: 0 solid;
+    margin: 0;
+    padding: 0;
 
+    font-size: 0.9em; /* المشكلة الأولى: تصغير متراكم للعناصر المتداخلة */
+
+    unicode-bidi: isolate; 
+    direction: ltr; /* المشكلة الكبرى: إجبار كل عناصر الصفحة على اتجاه LTR */
+}
 /* =========================================================
    44KG_GLOBAL.CSS 
    التنسيق العام للموقع - مُحسّن ومرن (متوافق مع الستايلات الجانبية)
@@ -378,7 +388,7 @@ pre code {
     }
 }
 
-/* 10. REDUCE MOTION 
+/* 10. REDUCE MOTION  */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         scroll-behavior: auto !important;
@@ -386,7 +396,7 @@ pre code {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
-} */
+}
 /* =========================================================
    13. الجداول المتجاوبة والشاملة (بدون تعديل HTML)
    ========================================================= */
