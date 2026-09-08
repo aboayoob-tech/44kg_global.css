@@ -336,34 +336,7 @@ pre code {
     unicode-bidi: isolate;
     direction: ltr;
 }
-/* 9. RESPONSIVE MEDIA QUERIES */
-@media (max-width: 768px) {
-    :not(.editor-layout-table) > table,
-    :not(.editor-layout-table) > table thead,
-    :not(.editor-layout-table) > table tbody,
-    :not(.editor-layout-table) > table tr,
-    :not(.editor-layout-table) > table th,
-    :not(.editor-layout-table) > table td {
-        display: block !important;
-        width: 100% !important;
-    }
-    :not(.editor-layout-table) > table thead {
-        display: none !important;
-    }
-    :not(.editor-layout-table) > table tbody tr {
-        margin-bottom: 15px !important;
-        border: 1px solid #ddd !important;
-        border-radius: 8px !important;
-        background-color: #fff !important;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
-    }
-    :not(.editor-layout-table) > table tbody td {
-        text-align: right !important;
-        padding: 10px 14px !important;
-        border-bottom: 1px solid #f1f1f1 !important;
-        border-left: none !important;
-        font-size: 0.9rem !important;
-    }
+
     pre {
         margin: 1.25rem 0;
         padding: 0.9rem 1rem;
