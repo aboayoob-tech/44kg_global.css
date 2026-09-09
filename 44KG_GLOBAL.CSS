@@ -1,6 +1,5 @@
 @import url('ALMohanad/ALMohanad_fonts.css?ver=2.16');
-/* في أعلى ملف */
-/* 44KG_GLOBAL.CSS */
+/* أعلى ملف 44KG_GLOBAL.CSS */
 
 @font-face {
     font-family: 'AlarabyTV';
@@ -26,18 +25,16 @@
     src: url('ALMohanad/AlarabyTVRegular.woff') format('woff');
     unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
 }
+
+/* 1. المولد العام (Reset) بدون إجبار اتجاه أو تصغير خطوط متراكم */
 *, *::before, *::after, ::backdrop {
     box-sizing: border-box;
     border: 0 solid;
     margin: 0;
     padding: 0;
-
-    font-size: 0.9em; /* المشكلة الأولى: تصغير متراكم للعناصر المتداخلة */
-
-    unicode-bidi: isolate; 
-    direction: ltr; /* المشكلة الكبرى: إجبار كل عناصر الصفحة على اتجاه LTR */
 }
-/* 1. ROOT VARIABLES & RESET */
+
+/* 2. ROOT VARIABLES & RESET */
 :root {
     /* الخطوط والأبعاد المرنة (تُدار من الستايلات الجانبية) */
     --font-scale: 1;
@@ -47,7 +44,7 @@
     --content-line-height: 1.7;
     --ui-font-size: 0.875rem;
     
-    /* الألوان الأساسية */
+    /* والألوان الأساسية */
     --primary: #0d6efd;
     --success: #198754;
     --warning: #ffc107;
@@ -71,15 +68,11 @@
     /* إضافات */
     --bg-gradient-intensity: 1;
 }
-*, *::before, *::after, ::backdrop {
-    box-sizing: border-box;
-    border: 0 solid;
-    margin: 0;
-    padding: 0;
-}
+
 html {
     max-width: 100%;
     overflow-x: hidden;
+    direction: rtl; /* ضبط اتجاه الصفحة ليكون من اليمين لليسار بشكل افتراضي وسليم */
     scrollbar-gutter: stable;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
@@ -87,6 +80,7 @@ html {
     -webkit-tap-highlight-color: transparent;
     scrollbar-color: #8C7A6B #EEE4D7;
 }
+
 body {
     max-width: 100%;
     overflow-x: hidden;
@@ -100,16 +94,14 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    /* تصفية ونعومة رندرة الخطوط */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: transparent;
-    text-rendering: optimizeLegibility;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 body > * {
     max-width: 100%;
 }
+
 /* 2. MEDIA ELEMENTS */
 img, video, canvas, audio, embed, object {
     max-width: 100%;
@@ -117,6 +109,7 @@ img, video, canvas, audio, embed, object {
 img, video, canvas {
     height: auto;
 }
+
 /* 3. TYPOGRAPHY */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--content-font);
@@ -130,12 +123,14 @@ h3 { font-size: calc(1.5rem * var(--font-scale)); }
 h4 { font-size: calc(1.3rem * var(--font-scale)); }
 h5 { font-size: calc(1.1rem * var(--font-scale)); }
 h6 { font-size: calc(1rem * var(--font-scale)); }
+
 .TitleShadow {
     color: #7b1f1f;
     text-shadow: 1px 1px 0 #ffe0b3, 2px 2px 4px rgba(0, 0, 0, 0.18);
     font-size: calc(1.6rem * var(--font-scale));
     font-weight: 700;
 }
+
 /* 4. LINKS */
 a {
     color: var(--link-color);
@@ -149,6 +144,7 @@ a:active {
     color: #0000ee;
     text-decoration: none;
 }
+
 /* 5. LISTS */
 menu, ul, ol {
     margin-top: 0;
@@ -156,6 +152,7 @@ menu, ul, ol {
 }
 ul { padding-right: 20px; padding-left: 0; }
 ol { padding-right: 24px; padding-left: 0; direction: rtl; }
+
 .list-unstyled {
     list-style: none;
     margin: 0;
@@ -168,6 +165,7 @@ li {
 }
 li::marker { color: #4d4d4d; }
 li:hover { color: #000080; }
+
 /* 6. HEADER / NAVBAR / FOOTER */
 header, footer, #main-footer, .navbar {
     background: linear-gradient(to left, #fefdfa, #ece7d5) !important;
@@ -179,7 +177,7 @@ header, footer, #main-footer, .navbar {
 hr { color: #ff6f61; }
 
 /* =========================================================
-   8. CODE BLOCKS
+   8. CODE BLOCKS (مدمجة ومستقلة تماماً بلغة LTR للأكواد)
    ========================================================= */
 pre {
     display: block;
@@ -193,57 +191,17 @@ pre {
     border-left: 4px solid var(--primary);
     border-radius: 10px;
     overflow-x: auto;
-    /* الخط البرمجي */
-    font-family:
-        "Cascadia Code",
-        "SFMono-Regular",
-        Consolas,
-        monospace;
+    font-family: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
     font-size: 0.9rem;
     line-height: 1.7;
     tab-size: 4;
     white-space: pre-wrap;
-    /*
-     * اتجاه صندوق الكود
-     */
-    direction: ltr;
-    text-align: left;
-    unicode-bidi: normal;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-/* =========================================================
-   CODE BLOCKS — مستقل تمامًا عن اتجاه الصفحة
-   ========================================================= */
-pre {
     direction: ltr !important;
     text-align: left !important;
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    margin: 1.5rem 0;
-    padding: 1rem 1.25rem;
-    background: var(--code-bg);
-    color: var(--code-text);
-    border: 1px solid var(--code-border);
-    border-left: 4px solid var(--primary);
-    border-radius: 10px;
-    overflow-x: auto;
-    font-family:
-        "Cascadia Code",
-        "SFMono-Regular",
-        Consolas,
-        monospace;
-    font-size: 0.9rem;
-    line-height: 1.7;
-    tab-size: 4;
-    white-space: pre-wrap;
-    /*
-     * مهم جدًا:
-     * يمنع وراثة قواعد bidi من العناصر الأب.
-     */
     unicode-bidi: isolate;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
+
 pre code {
     display: block;
     margin: 0;
@@ -256,11 +214,9 @@ pre code {
     line-height: inherit;
     direction: ltr !important;
     text-align: left !important;
-    /*
-     * استقلال كامل عن اتجاه الصفحة
-     */
     unicode-bidi: isolate;
 }
+
 /* =========================================================
    INLINE CODE
    ========================================================= */
@@ -271,15 +227,16 @@ pre code {
     color: #c7254e;
     border: 1px solid #e5e7eb;
     border-radius: 5px;
-    font-family:
-        Consolas,
-        "Cascadia Code",
-        monospace;
+    font-family: Consolas, "Cascadia Code", monospace;
     font-size: 0.9em;
     unicode-bidi: isolate;
     direction: ltr;
 }
 
+/* =========================================================
+   MEDIA QUERIES
+   ========================================================= */
+@media (max-width: 768px) {
     pre {
         margin: 1.25rem 0;
         padding: 0.9rem 1rem;
@@ -287,12 +244,14 @@ pre code {
         font-size: 0.82rem;
     }
 }
+
 @media (max-width: 480px) {
     pre {
         padding: 0.8rem;
         font-size: 0.78rem;
     }
 }
+
 /* 10. REDUCE MOTION */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
