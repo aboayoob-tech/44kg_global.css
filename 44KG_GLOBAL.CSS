@@ -1,12 +1,21 @@
 @import url('ALMohanad/ALMohanad_fonts.css?ver=2.16');
 /* أعلى ملف 44KG_GLOBAL.CSS */
 
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
 @font-face {
     font-family: 'AlarabyTV';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     font-display: swap;
-    src: url('ALMohanad/AlarabyTVBold.woff') format('woff');
+    src: url('https://raw.githubusercontent.com/aboayoob-tech/44kg_global.css/44kg_global_css/ALMohanad/AlarabyTVBold.woff') format('woff');
+    unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+@font-face {
+    font-family: 'AlarabyTV';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('https://raw.githubusercontent.com/aboayoob-tech/44kg_global.css/44kg_global_css/ALMohanad/AlarabyTVMedium.woff') format('woff');
     unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
 }
 @font-face {
@@ -14,16 +23,41 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('ALMohanad/AlarabyTVMedium.woff') format('woff');
-    unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+    src: url('https://raw.githubusercontent.com/aboayoob-tech/44kg_global.css/44kg_global_css/ALMohanad/AlarabyTVRegular.woff') format('woff');
+    unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
 }
 @font-face {
-    font-family: 'AlarabyTV';
-    font-style: normal;
+    font-family: 'AL-Mohanad';
+    src: url('https://raw.githubusercontent.com/aboayoob-tech/44kg_global.css/44kg_global_css/ALMohanad/AL-Mohanad-Regular-v11.woff2') format('woff2');
     font-weight: 400;
     font-display: swap;
-    src: url('ALMohanad/AlarabyTVRegular.woff') format('woff');
-    unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+    size-adjust: 125%;
+    
+    unicode-range: U +0600 -06FF, U +0750 -077F, U +0870 -088E, U +0890 -0891, U +0897 -08E1, U +08E3 -08FF, U +200C -200E, U +2010 -2011, U +204F, U +2E41, U + FB50-FDFF, U + FE70-FE74, U + FE76-FEFC, U +102E0 -102FB, U +10E60 -10E7E, U +10EC2 -10EC4, U +10EFC -10EFF, U +1EE00 -1EE03, U +1EE05 -1EE1F, U +1EE21 -1EE22, U +1EE24, U +1EE27, U +1EE29 -1EE32, U +1EE34 -1EE37, U +1EE39, U +1EE3B, U +1EE42, U +1EE47, U +1EE49, U +1EE4B, U +1EE4D -1EE4F, U +1EE51 -1EE52, U +1EE54, U +1EE57, U +1EE59, U +1EE5B, U +1EE5D, U +1EE5F, U +1EE61 -1EE62, U +1EE64, U +1EE67 -1EE6A, U +1EE6C -1EE72, U +1EE74 -1EE77, U +1EE79 -1EE7C, U +1EE7E, U +1EE80 -1EE89, U +1EE8B -1EE9B, U +1EEA1 -1EEA3, U +1EEA5 -1EEA9, U +1EEAB -1EEBB, U +1EEF0 -1EEF1;
+}
+@font-face {
+    font-family: 'AL-Mohanad';
+    src: url('https://raw.githubusercontent.com/aboayoob-tech/44kg_global.css/44kg_global_css/ALMohanad/AL-Mohanad-Bold-v11.woff2') format('woff2');
+    font-weight: 600 700;
+    font-display: swap;
+    size-adjust: 125%; 
+    unicode-range: U +0600 -06FF, U +0750 -077F, U +0870 -088E, U +0890 -0891, U +0897 -08E1, U +08E3 -08FF, U +200C -200E, U +2010 -2011, U +204F, U +2E41, U + FB50-FDFF, U + FE70-FE74, U + FE76-FEFC, U +102E0 -102FB, U +10E60 -10E7E, U +10EC2 -10EC4, U +10EFC -10EFF, U +1EE00 -1EE03, U +1EE05 -1EE1F, U +1EE21 -1EE22, U +1EE24, U +1EE27, U +1EE29 -1EE32, U +1EE34 -1EE37, U +1EE39, U +1EE3B, U +1EE42, U +1EE47, U +1EE49, U +1EE4B, U +1EE4D -1EE4F, U +1EE51 -1EE52, U +1EE54, U +1EE57, U +1EE59, U +1EE5B, U +1EE5D, U +1EE5F, U +1EE61 -1EE62, U +1EE64, U +1EE67 -1EE6A, U +1EE6C -1EE72, U +1EE74 -1EE77, U +1EE79 -1EE7C, U +1EE7E, U +1EE80 -1EE89, U +1EE8B -1EE9B, U +1EEA1 -1EEA3, U +1EEA5 -1EEA9, U +1EEAB -1EEBB, U +1EEF0 -1EEF1;
+}
+@font-face {
+    font-family: 'AL-Mohanad';
+    src: local('Segoe UI'), local('Helvetica Neue'), local('Arial');
+    font-weight: 400;
+    font-display: swap;
+    size-adjust: 88%;
+    unicode-range: U+0000-024F, U+0370-03FF, U+2000-206F, U+2070-209F, U+20A0-20CF;
+}
+@font-face {
+    font-family: 'AL-Mohanad';
+    src: local('Segoe UI Bold'), local('Helvetica Neue Bold'), local('Arial Bold');
+    font-weight: 600 700;
+    font-display: swap;
+    size-adjust: 88%;
+    unicode-range: U+0000-024F, U+0370-03FF, U+2000-206F, U+2070-209F, U+20A0-20CF;
 }
 
 /* 1. المولد العام (Reset) بدون إجبار اتجاه أو تصغير خطوط متراكم */
@@ -34,17 +68,13 @@
     padding: 0;
 }
 
-/* 2. ROOT VARIABLES & RESET */
 :root {
-    /* الخطوط والأبعاد المرنة (تُدار من الستايلات الجانبية) */
     --font-scale: 1;
-    --content-font: inherit;
-    --content-font-weight: normal;
-    --content-font-size: inherit;
+    --content-font: 'AlarabyTV', sans-serif;
+    --content-font-weight: 400;
+    --content-font-size: 1rem;
     --content-line-height: 1.7;
-    --ui-font-size: 0.875rem;
     
-    /* والألوان الأساسية */
     --primary: #0d6efd;
     --success: #198754;
     --warning: #ffc107;
@@ -55,161 +85,35 @@
     --surface-2: #f8f9fa;
     --bg-body: #F4EEE5;
     --border: #dee2e6;
-    --color-on-primary: #fff;
     
-    /* الأكواد البرمجية */
     --code-bg: #0d1117;
     --code-text: #e6edf3;
     --code-border: #30363d;
     
-    /* الروابط */
-    --link-color: #0080c0;
+    --link-color: #3273dc;
     --link-hover: #c71585;
-    /* إضافات */
-    --bg-gradient-intensity: 1;
 }
 
 html {
-    max-width: 100%;
-    overflow-x: hidden;
-    direction: rtl; /* ضبط اتجاه الصفحة ليكون من اليمين لليسار بشكل افتراضي وسليم */
-    scrollbar-gutter: stable;
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-    line-height: var(--content-line-height);
-    -webkit-tap-highlight-color: transparent;
-    scrollbar-color: #8C7A6B #EEE4D7;
+    direction: rtl;
+    font-size: 16px;
 }
 
 body {
-    max-width: 100%;
-    overflow-x: hidden;
-    position: relative;
     background-color: var(--bg-body);
     color: var(--text);
     font-family: var(--content-font);
-    font-weight: var(--content-font-weight);
-    /* قيمة فعلية تمنع وراثة حجم صغير من القالب أو الستايلات الجانبية */
-    font-size: 1rem;
+    font-size: var(--content-font-size);
     line-height: var(--content-line-height);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: transparent;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-body > * {
-    max-width: 100%;
+hr { 
+    border-color: #ff6f61; 
 }
 
-/* =========================================================
-   2A. TABLES (ترتيب الأعمدة مستقل عن اتجاه النص العربي)
-   ========================================================= */
-table {
-    width: 100%;
-    max-width: 100%;
-    border-collapse: collapse;
-    direction: ltr !important;
-    font-size: 1rem !important;
-    line-height: 1.6;
-}
-
-table caption,
-table th,
-table td {
-    direction: rtl;
-    text-align: right;
-    font-size: 1rem !important;
-}
-
-table th,
-table td {
-    padding: 0.65rem 0.8rem;
-    vertical-align: middle;
-}
-
-/* 2. MEDIA ELEMENTS */
-img, video, canvas, audio, embed, object {
-    max-width: 100%;
-}
-img, video, canvas {
-    height: auto;
-}
-
-/* 3. TYPOGRAPHY */
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--content-font);
-    color: var(--link-color);
-    font-weight: 700;
-    line-height: 1.2;
-}
-h1 { font-size: calc(2.2rem * var(--font-scale)); }
-h2 { font-size: calc(1.8rem * var(--font-scale)); }
-h3 { font-size: calc(1.5rem * var(--font-scale)); }
-h4 { font-size: calc(1.3rem * var(--font-scale)); }
-h5 { font-size: calc(1.1rem * var(--font-scale)); }
-h6 { font-size: calc(1rem * var(--font-scale)); }
-
-.TitleShadow {
-    color: #7b1f1f;
-    text-shadow: 1px 1px 0 #ffe0b3, 2px 2px 4px rgba(0, 0, 0, 0.18);
-    font-size: calc(1.6rem * var(--font-scale));
-    font-weight: 700;
-}
-
-/* 4. LINKS */
-a {
-    color: var(--link-color);
-    transition: color 0.25s ease, text-decoration-color 0.25s ease;
-}
-a:hover {
-    color: var(--link-hover);
-    text-decoration: underline;
-}
-a:active {
-    color: #0000ee;
-    text-decoration: none;
-}
-
-/* 5. LISTS */
-menu, ul, ol {
-    margin-top: 0;
-    margin-bottom: 1rem;
-}
-ul { padding-right: 20px; padding-left: 0; }
-ol { padding-right: 24px; padding-left: 0; direction: rtl; }
-
-.list-unstyled {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-li {
-    margin: 4px 0;
-    color: #0a3444;
-    transition: color 0.2s ease;
-}
-li::marker { color: #4d4d4d; }
-li:hover { color: #000080; }
-
-/* 6. HEADER / NAVBAR / FOOTER */
-header, footer, #main-footer, .navbar {
-    background: linear-gradient(to left, #fefdfa, #ece7d5) !important;
-}
-.navbar {
-    border-bottom: 2px solid #c4b58b !important;
-    box-shadow: 0 6px 15px rgba(184, 168, 128, 0.3) !important;
-}
-hr { color: #ff6f61; }
-
-/* =========================================================
-   8. CODE BLOCKS (مدمجة ومستقلة تماماً بلغة LTR للأكواد)
-   ========================================================= */
 pre {
     display: block;
     width: 100%;
-    max-width: 100%;
     margin: 1.5rem 0;
     padding: 1rem 1.25rem;
     background: var(--code-bg);
@@ -218,35 +122,22 @@ pre {
     border-left: 4px solid var(--primary);
     border-radius: 10px;
     overflow-x: auto;
-    font-family: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+    font-family: "Cascadia Code", Consolas, monospace;
     font-size: 0.9rem;
     line-height: 1.7;
-    tab-size: 4;
-    white-space: pre-wrap;
     direction: ltr !important;
     text-align: left !important;
     unicode-bidi: isolate;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 pre code {
     display: block;
-    margin: 0;
-    padding: 0;
     background: transparent !important;
     color: inherit;
-    border: 0;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
     direction: ltr !important;
     text-align: left !important;
-    unicode-bidi: isolate;
 }
 
-/* =========================================================
-   INLINE CODE
-   ========================================================= */
 :not(pre) > code {
     display: inline-block;
     padding: 0.15rem 0.4rem;
@@ -254,37 +145,21 @@ pre code {
     color: #c7254e;
     border: 1px solid #e5e7eb;
     border-radius: 5px;
-    font-family: Consolas, "Cascadia Code", monospace;
+    font-family: Consolas, monospace;
     font-size: 0.9em;
-    unicode-bidi: isolate;
     direction: ltr;
 }
 
-/* =========================================================
-   MEDIA QUERIES
-   ========================================================= */
 @media (max-width: 768px) {
     pre {
-        margin: 1.25rem 0;
-        padding: 0.9rem 1rem;
-        border-radius: 8px;
         font-size: 0.82rem;
     }
 }
 
-@media (max-width: 480px) {
-    pre {
-        padding: 0.8rem;
-        font-size: 0.78rem;
-    }
-}
-
-/* 10. REDUCE MOTION */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         scroll-behavior: auto !important;
         animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
 }
