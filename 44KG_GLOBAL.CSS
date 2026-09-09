@@ -89,7 +89,8 @@ body {
     color: var(--text);
     font-family: var(--content-font);
     font-weight: var(--content-font-weight);
-    font-size: var(--content-font-size);
+    /* قيمة فعلية تمنع وراثة حجم صغير من القالب أو الستايلات الجانبية */
+    font-size: 1rem;
     line-height: var(--content-line-height);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -100,6 +101,32 @@ body {
 
 body > * {
     max-width: 100%;
+}
+
+/* =========================================================
+   2A. TABLES (ترتيب الأعمدة مستقل عن اتجاه النص العربي)
+   ========================================================= */
+table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    direction: ltr !important;
+    font-size: 1rem !important;
+    line-height: 1.6;
+}
+
+table caption,
+table th,
+table td {
+    direction: rtl;
+    text-align: right;
+    font-size: 1rem !important;
+}
+
+table th,
+table td {
+    padding: 0.65rem 0.8rem;
+    vertical-align: middle;
 }
 
 /* 2. MEDIA ELEMENTS */
